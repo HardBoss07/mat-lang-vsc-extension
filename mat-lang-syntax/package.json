@@ -1,8 +1,9 @@
 {
   "name": "mat-lang-syntax",
-  "displayName": "mat-syntax",
+  "displayName": "MAT Syntax",
   "description": "Syntax highlighting for the MAT programming language",
   "version": "0.0.1",
+  "publisher": "your-publisher-name", 
   "engines": {
     "vscode": "^1.99.0"
   },
@@ -10,16 +11,25 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "mat",
-      "aliases": ["mat", "mat"],
-      "extensions": [".mat"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "mat",
-      "scopeName": "source.mat",
-      "path": "./syntaxes/mat.tmLanguage.json"
-    }]
-  }
+    "languages": [
+      {
+        "id": "mat",
+        "aliases": ["MAT", "mat"],
+        "extensions": [".mat"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "mat",
+        "scopeName": "source.mat",
+        "path": "./syntaxes/mat.tmLanguage.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://https://github.com/HardBoss07/mat-lang-vsc-extension"
+  },
+  "icon": "icon.png"
 }

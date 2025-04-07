@@ -1,0 +1,6 @@
+void main() {
+    int a = 10;
+    if (a <= 10) {
+        sout("i like men and a is {a}");
+    }
+}

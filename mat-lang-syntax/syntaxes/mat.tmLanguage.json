@@ -1,32 +1,56 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "mat",
+	"scopeName": "source.mat",
+	"name": "MAT Language",
+	"fileTypes": ["mat"],
 	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
+	  {
+		"name": "keyword.control.mat",
+		"match": "\\b(if|else|while|for|return|void)\\b"
+	  },
+	  {
+		"name": "storage.type.mat",
+		"match": "\\b(int|float|bool|string)\\b"
+	  },
+	  {
+		"name": "constant.language.mat",
+		"match": "\\b(true|false|tru|fal|null)\\b"
+	  },
+	  {
+		"name": "variable.other.mat",
+		"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+	  },
+	  {
+		"name": "keyword.operator.mat",
+		"match": "\\+|\\-|\\*|\\/|\\+=|\\-=|\\*=|\\/=|==|!=|<=|>=|<|>"
+	  },
+	  {
+		"name": "string.quoted.double.mat",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "constant.character.escape.mat",
+			"match": "\\\\."
+		  },
+		  {
+			"name": "variable.interpolation.mat",
+			"match": "\\{[a-zA-Z_][a-zA-Z0-9_]*\\}"
+		  }
+		]
+	  },
+	  {
+		"name": "constant.numeric.mat",
+		"match": "\\b\\d+(\\.\\d+)?\\b"
+	  },
+	  {
+		"name": "entity.name.function.mat",
+		"match": "\\b(sout)\\b"
+	  },
+	  {
+		"name": "comment.line.double-slash.mat",
+		"match": "//.*$"
+	  }
 	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.mat",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.mat",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.mat",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.mat"
-}
+	"repository": {},
+	"uuid": "mat-lang-syntax-highlighting"
+  }  
