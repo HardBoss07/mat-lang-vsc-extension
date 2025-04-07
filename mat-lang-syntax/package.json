@@ -1,0 +1,25 @@
+{
+  "name": "mat-lang-syntax",
+  "displayName": "mat-syntax",
+  "description": "Syntax highlighting for the MAT programming language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "mat",
+      "aliases": ["mat", "mat"],
+      "extensions": [".mat"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "mat",
+      "scopeName": "source.mat",
+      "path": "./syntaxes/mat.tmLanguage.json"
+    }]
+  }
+}
