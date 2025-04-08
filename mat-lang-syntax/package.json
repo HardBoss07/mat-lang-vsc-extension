@@ -25,6 +25,13 @@
         "scopeName": "source.mat",
         "path": "./syntaxes/mat.tmLanguage.json"
       }
+    ],
+    "themes": [
+      {
+        "label": "MAT-Lang Syntax Highlighting",
+        "uiTheme": "vs-dark",
+        "path": "./themes/mat-lang-color-theme.json"
+      }
     ]
   },
   "repository": {

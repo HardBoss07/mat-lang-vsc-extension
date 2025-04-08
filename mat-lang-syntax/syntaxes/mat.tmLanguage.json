@@ -43,12 +43,31 @@
 		"match": "\\b\\d+(\\.\\d+)?\\b"
 	  },
 	  {
-		"name": "entity.name.function.mat",
-		"match": "\\b(sout)\\b"
+		"name": "entity.name.function.builtin.mat",
+		"match": "\\b(sout|print|log)\\b"
+	  },
+	  {
+		"name": "entity.name.function.custom.mat",
+		"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b",
+		"captures": {
+		  "0": {
+			"name": "entity.name.function.custom.mat",
+			"patterns": [
+			  {
+				"match": "\\b(sout)\\b",
+				"name": "variable.other.mat"
+			  }
+			]
+		  }
+		}
 	  },
 	  {
 		"name": "comment.line.double-slash.mat",
 		"match": "//.*$"
+	  },
+	  {
+		"name": "punctuation.terminator.statement.mat",
+		"match": ";"
 	  }
 	],
 	"repository": {},

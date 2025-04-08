@@ -1,0 +1,179 @@
+{
+	"name": "MAT-Lang Syntax Highlighting",
+	"colors": {
+	  "editor.background": "#1c1c1c",
+	  "editor.foreground": "#eeffff",
+	  "activityBarBadge.background": "#007acc",
+	  "sideBarTitle.foreground": "#bbbbbb"
+	},
+	"tokenColors": [
+	  {
+		"name": "MAT-Lang Keywords",
+		"scope": [
+		  "keyword.control.matlang"
+		],
+		"settings": {
+		  "foreground": "#C792EA",
+		  "fontStyle": "bold"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Types",
+		"scope": [
+		  "support.type.matlang"
+		],
+		"settings": {
+		  "foreground": "#FFCB6B"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Constants",
+		"scope": [
+		  "constant.language.matlang"
+		],
+		"settings": {
+		  "foreground": "#F78C6C"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Function Names",
+		"scope": [
+		  "entity.name.function.custom.matlang"
+		],
+		"settings": {
+		  "foreground": "#82AAFF"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Variables",
+		"scope": [
+		  "variable.other.matlang"
+		],
+		"settings": {
+		  "foreground": "#EEFFFF"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Operators",
+		"scope": [
+		  "keyword.operator.matlang"
+		],
+		"settings": {
+		  "foreground": "#89DDFF"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Comments",
+		"scope": [
+		  "comment.line.double-slash.matlang"
+		],
+		"settings": {
+		  "foreground": "#528856",
+		  "fontStyle": "italic"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Strings",
+		"scope": [
+		  "string.quoted.double.matlang"
+		],
+		"settings": {
+		  "foreground": "#528856"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Numbers",
+		"scope": [
+		  "constant.numeric.matlang"
+		],
+		"settings": {
+		  "foreground": "#91fa9f"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Brackets",
+		"scope": [
+		  "punctuation.brackets.matlang"
+		],
+		"settings": {
+		  "foreground": "#89DDFF"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Invalid",
+		"scope": [
+		  "invalid.illegal.matlang"
+		],
+		"settings": {
+		  "foreground": "#FF5370"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Annotations",
+		"scope": [
+		  "entity.other.annotation.matlang"
+		],
+		"settings": {
+		  "foreground": "#C792EA",
+		  "fontStyle": "italic"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Builtins",
+		"scope": [
+		  "support.function.builtin.matlang"
+		],
+		"settings": {
+		  "foreground": "#82AAFF",
+		  "fontStyle": "italic"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Braces",
+		"scope": [
+		  "punctuation.section.braces.matlang"
+		],
+		"settings": {
+		  "foreground": "#89DDFF"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Delimiters",
+		"scope": [
+		  "punctuation.separator.matlang"
+		],
+		"settings": {
+		  "foreground": "#89DDFF"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Matrix Identifiers",
+		"scope": [
+		  "variable.matrix.matlang"
+		],
+		"settings": {
+		  "foreground": "#FFCB6B"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Function Calls",
+		"scope": [
+		  "meta.function-call.matlang"
+		],
+		"settings": {
+		  "foreground": "#82AAFF"
+		}
+	  },
+	  {
+		"name": "MAT-Lang Keywords - Control",
+		"scope": [
+		  "keyword.control.conditional.matlang",
+		  "keyword.control.loop.matlang"
+		],
+		"settings": {
+		  "foreground": "#C792EA"
+		}
+	  }
+	]
+  }
+  
