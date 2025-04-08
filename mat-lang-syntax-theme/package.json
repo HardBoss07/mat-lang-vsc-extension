@@ -1,0 +1,21 @@
+{
+  "name": "mat-lang-syntax-theme",
+  "displayName": "mat-lang-syntax-theme",
+  "description": "Color theme for MAT syntax highlighting",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "MAT-Lang Syntax Highlighting",
+        "uiTheme": "vs-dark",
+        "path": "./themes/MAT-Lang Syntax Highlighting-color-theme.json"
+      }
+    ]
+  }
+}
