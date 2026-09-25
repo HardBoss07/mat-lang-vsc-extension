@@ -1,179 +1,121 @@
 {
-	"name": "MAT-Lang Syntax Highlighting",
-	"colors": {
-	  "editor.background": "#1c1c1c",
-	  "editor.foreground": "#eeffff",
-	  "activityBarBadge.background": "#007acc",
-	  "sideBarTitle.foreground": "#bbbbbb"
-	},
-	"tokenColors": [
-	  {
-		"name": "MAT-Lang Keywords",
-		"scope": [
-		  "keyword.control.matlang"
-		],
-		"settings": {
-		  "foreground": "#C792EA",
-		  "fontStyle": "bold"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Types",
-		"scope": [
-		  "support.type.matlang"
-		],
-		"settings": {
-		  "foreground": "#FFCB6B"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Constants",
-		"scope": [
-		  "constant.language.matlang"
-		],
-		"settings": {
-		  "foreground": "#F78C6C"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Function Names",
-		"scope": [
-		  "entity.name.function.custom.matlang"
-		],
-		"settings": {
-		  "foreground": "#82AAFF"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Variables",
-		"scope": [
-		  "variable.other.matlang"
-		],
-		"settings": {
-		  "foreground": "#EEFFFF"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Operators",
-		"scope": [
-		  "keyword.operator.matlang"
-		],
-		"settings": {
-		  "foreground": "#89DDFF"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Comments",
-		"scope": [
-		  "comment.line.double-slash.matlang"
-		],
-		"settings": {
-		  "foreground": "#528856",
-		  "fontStyle": "italic"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Strings",
-		"scope": [
-		  "string.quoted.double.matlang"
-		],
-		"settings": {
-		  "foreground": "#528856"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Numbers",
-		"scope": [
-		  "constant.numeric.matlang"
-		],
-		"settings": {
-		  "foreground": "#91fa9f"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Brackets",
-		"scope": [
-		  "punctuation.brackets.matlang"
-		],
-		"settings": {
-		  "foreground": "#89DDFF"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Invalid",
-		"scope": [
-		  "invalid.illegal.matlang"
-		],
-		"settings": {
-		  "foreground": "#FF5370"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Annotations",
-		"scope": [
-		  "entity.other.annotation.matlang"
-		],
-		"settings": {
-		  "foreground": "#C792EA",
-		  "fontStyle": "italic"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Builtins",
-		"scope": [
-		  "support.function.builtin.matlang"
-		],
-		"settings": {
-		  "foreground": "#82AAFF",
-		  "fontStyle": "italic"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Braces",
-		"scope": [
-		  "punctuation.section.braces.matlang"
-		],
-		"settings": {
-		  "foreground": "#89DDFF"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Delimiters",
-		"scope": [
-		  "punctuation.separator.matlang"
-		],
-		"settings": {
-		  "foreground": "#89DDFF"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Matrix Identifiers",
-		"scope": [
-		  "variable.matrix.matlang"
-		],
-		"settings": {
-		  "foreground": "#FFCB6B"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Function Calls",
-		"scope": [
-		  "meta.function-call.matlang"
-		],
-		"settings": {
-		  "foreground": "#82AAFF"
-		}
-	  },
-	  {
-		"name": "MAT-Lang Keywords - Control",
-		"scope": [
-		  "keyword.control.conditional.matlang",
-		  "keyword.control.loop.matlang"
-		],
-		"settings": {
-		  "foreground": "#C792EA"
-		}
-	  }
-	]
-  }
-  
+  "name": "MAT-Lang Syntax Highlighting",
+  "colors": {
+    "editor.background": "#1c1c1c",
+    "editor.foreground": "#eeffff",
+    "activityBarBadge.background": "#007acc",
+    "sideBarTitle.foreground": "#bbbbbb"
+  },
+  "tokenColors": [
+    {
+      "name": "MAT Control Keywords",
+      "scope": ["keyword.control.mat"],
+      "settings": {
+        "foreground": "#C792EA",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "MAT Declaration Keywords",
+      "scope": ["keyword.other.declaration.mat"],
+      "settings": {
+        "foreground": "#C792EA"
+      }
+    },
+    {
+      "name": "MAT Primitive Types",
+      "scope": ["storage.type.primitive.mat"],
+      "settings": {
+        "foreground": "#FFCB6B"
+      }
+    },
+    {
+      "name": "MAT Custom & Built-in Types",
+      "scope": ["support.type.builtin.mat", "entity.name.type.mat"],
+      "settings": {
+        "foreground": "#FFC66D"
+      }
+    },
+    {
+      "name": "MAT Booleans & Constants",
+      "scope": ["constant.language.boolean.mat"],
+      "settings": {
+        "foreground": "#F78C6C",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "MAT Numbers",
+      "scope": [
+        "constant.numeric.hex.mat",
+        "constant.numeric.binary.mat",
+        "constant.numeric.float.mat",
+        "constant.numeric.decimal.mat"
+      ],
+      "settings": {
+        "foreground": "#91FA9F"
+      }
+    },
+    {
+      "name": "MAT Functions",
+      "scope": ["entity.name.function.mat", "support.function.builtin.mat"],
+      "settings": {
+        "foreground": "#82AAFF"
+      }
+    },
+    {
+      "name": "MAT Operators",
+      "scope": [
+        "keyword.operator.mutation.mat",
+        "keyword.operator.assignment.compound.mat",
+        "keyword.operator.bitwise.mat",
+        "keyword.operator.comparison.mat",
+        "keyword.operator.logical.mat",
+        "keyword.operator.arithmetic.mat",
+        "keyword.operator.assignment.mat"
+      ],
+      "settings": {
+        "foreground": "#89DDFF"
+      }
+    },
+    {
+      "name": "MAT Comments",
+      "scope": ["comment.line.double-slash.mat"],
+      "settings": {
+        "foreground": "#528856",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "MAT Strings",
+      "scope": ["string.quoted.double.mat"],
+      "settings": {
+        "foreground": "#C3E88D"
+      }
+    },
+    {
+      "name": "MAT String Interpolation Braces",
+      "scope": [
+        "punctuation.definition.template-expression.begin.mat",
+        "punctuation.definition.template-expression.end.mat"
+      ],
+      "settings": {
+        "foreground": "#89DDFF",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "MAT Punctuation & Brackets",
+      "scope": [
+        "punctuation.brackets.mat",
+        "punctuation.separator.mat",
+        "punctuation.separator.namespace.mat",
+        "punctuation.separator.arrow.mat",
+        "punctuation.terminator.statement.mat"
+      ],
+      "settings": {
+        "foreground": "#89DDFF"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+# VS Code Package Artifacts
+*.vsix
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Visual Studio Code Temporary & Test Workspace
+.vscode-test/
+.vscode/
+
+# Build / Output Output Folders
+out/
+dist/
+
+# System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,75 +1,141 @@
 {
-	"scopeName": "source.mat",
-	"name": "MAT Language",
-	"fileTypes": ["mat"],
-	"patterns": [
-	  {
-		"name": "keyword.control.mat",
-		"match": "\\b(if|else|while|for|return|void)\\b"
-	  },
-	  {
-		"name": "storage.type.mat",
-		"match": "\\b(int|float|bool|string)\\b"
-	  },
-	  {
-		"name": "constant.language.mat",
-		"match": "\\b(true|false|tru|fal|null)\\b"
-	  },
-	  {
-		"name": "variable.other.mat",
-		"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
-	  },
-	  {
-		"name": "keyword.operator.mat",
-		"match": "\\+|\\-|\\*|\\/|\\+=|\\-=|\\*=|\\/=|==|!=|<=|>=|<|>"
-	  },
-	  {
-		"name": "string.quoted.double.mat",
-		"begin": "\"",
-		"end": "\"",
-		"patterns": [
-		  {
-			"name": "constant.character.escape.mat",
-			"match": "\\\\."
-		  },
-		  {
-			"name": "variable.interpolation.mat",
-			"match": "\\{[a-zA-Z_][a-zA-Z0-9_]*\\}"
-		  }
-		]
-	  },
-	  {
-		"name": "constant.numeric.mat",
-		"match": "\\b\\d+(\\.\\d+)?\\b"
-	  },
-	  {
-		"name": "entity.name.function.builtin.mat",
-		"match": "\\b(sout|print|log)\\b"
-	  },
-	  {
-		"name": "entity.name.function.custom.mat",
-		"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b",
-		"captures": {
-		  "0": {
-			"name": "entity.name.function.custom.mat",
-			"patterns": [
-			  {
-				"match": "\\b(sout)\\b",
-				"name": "variable.other.mat"
-			  }
-			]
-		  }
-		}
-	  },
-	  {
-		"name": "comment.line.double-slash.mat",
-		"match": "//.*$"
-	  },
-	  {
-		"name": "punctuation.terminator.statement.mat",
-		"match": ";"
-	  }
-	],
-	"repository": {},
-	"uuid": "mat-lang-syntax-highlighting"
-  }  
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "MAT Language",
+  "scopeName": "source.mat",
+  "fileTypes": ["mat"],
+  "patterns": [
+    {
+      "name": "comment.line.double-slash.mat",
+      "match": "//.*$"
+    },
+    {
+      "name": "string.quoted.double.mat",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.mat",
+          "match": "\\\\."
+        },
+        {
+          "name": "meta.interpolation.mat",
+          "begin": "\\{",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.template-expression.begin.mat"
+            }
+          },
+          "end": "\\}",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.template-expression.end.mat"
+            }
+          },
+          "patterns": [
+            {
+              "include": "$self"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "constant.numeric.hex.mat",
+      "match": "\\b0[xX][0-9a-fA-F_]+\\b"
+    },
+    {
+      "name": "constant.numeric.binary.mat",
+      "match": "\\b0[bB][01_]+\\b"
+    },
+    {
+      "name": "constant.numeric.float.mat",
+      "match": "\\b\\d[0-9_]*\\.\\d[0-9_]*\\b"
+    },
+    {
+      "name": "constant.numeric.decimal.mat",
+      "match": "\\b\\d[0-9_]*\\b"
+    },
+    {
+      "name": "constant.language.boolean.mat",
+      "match": "\\b(tru|fal)\\b"
+    },
+    {
+      "name": "keyword.control.mat",
+      "match": "\\b(if|else|while|fori|for|in|loop|match|return|break|continue)\\b"
+    },
+    {
+      "name": "keyword.other.declaration.mat",
+      "match": "\\b(let|mut|fn|struct|enum|import|pub)\\b"
+    },
+    {
+      "name": "storage.type.primitive.mat",
+      "match": "\\b(int|i32|i16|i8|f64|bool|char)\\b"
+    },
+    {
+      "name": "support.type.builtin.mat",
+      "match": "\\b(Result|Ok|Err|Vec|String)\\b"
+    },
+    {
+      "name": "support.function.builtin.mat",
+      "match": "\\b(println|print|read_line)\\b"
+    },
+    {
+      "name": "entity.name.type.mat",
+      "match": "\\b[A-Z][a-zA-Z0-9_]*\\b"
+    },
+    {
+      "name": "entity.name.function.mat",
+      "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()"
+    },
+    {
+      "name": "keyword.operator.mutation.mat",
+      "match": "\\+\\+|--"
+    },
+    {
+      "name": "keyword.operator.assignment.compound.mat",
+      "match": "<<=|>>=|\\+=|-=|\\*=|/=|%="
+    },
+    {
+      "name": "keyword.operator.bitwise.mat",
+      "match": "<<|>>|&|\\||\\^"
+    },
+    {
+      "name": "keyword.operator.comparison.mat",
+      "match": "==|!=|<=|>=|<|>"
+    },
+    {
+      "name": "keyword.operator.logical.mat",
+      "match": "&&|\\|\\||!"
+    },
+    {
+      "name": "keyword.operator.arithmetic.mat",
+      "match": "\\+|-|\\*|/|%"
+    },
+    {
+      "name": "keyword.operator.assignment.mat",
+      "match": "="
+    },
+    {
+      "name": "punctuation.separator.namespace.mat",
+      "match": "::"
+    },
+    {
+      "name": "punctuation.separator.arrow.mat",
+      "match": "->|=>"
+    },
+    {
+      "name": "punctuation.terminator.statement.mat",
+      "match": ";"
+    },
+    {
+      "name": "punctuation.separator.mat",
+      "match": "[,.:]"
+    },
+    {
+      "name": "punctuation.brackets.mat",
+      "match": "[\\(\\)\\[\\]\\{\\}]"
+    }
+  ],
+  "repository": {},
+  "uuid": "mat-lang-syntax-highlighting"
+}

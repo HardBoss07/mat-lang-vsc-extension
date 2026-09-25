@@ -1,6 +1,111 @@
-void main() {
-    int a = 10;
-    if (a <= 10) {
-        sout("i like men and a is {a}");
+// 1. Module Declarations & Imports
+import math::geometry;
+import std::io;
+
+// 2. Data Structures (Structs & Enums)
+pub struct Point {
+    pub x: int,
+    pub y: int,
+}
+
+// Rust-like Enums with payload types
+pub enum Shape {
+    Circle(f64),
+    Rectangle(Point, Point),
+    Label { title: String, is_visible: bool },
+}
+
+// 3. Fallible Functions & ADT Return Types
+fn parse_coordinate(raw: String) -> Result<int, String> {
+    if raw.is_empty() {
+        return Err("Cannot parse empty coordinate string");
+    }
+    return Ok(100);
+}
+
+// 4. Main Entry Point
+fn main() {
+    // Variable Bindings (Immutable by default, mutable with `mut`)
+    let origin: Point = Point { x: 0, y: 0 };
+    let mut score: int = 50;
+    let is_active: bool = tru; // Boolean primitives: tru / fal
+
+    // Binary and Hex Literals
+    let hex_mask: i32 = 0xA5;
+    let bin_flags: i8 = 0b10100100;
+
+    // String Interpolation
+    let mut content_var: String = "foobar";
+    let number: int = 23;
+    content_var = "foobar {number}";
+    println("Content: {content_var}");
+
+    // Unary, Infix, and Bitwise Shift Operators
+    score += 25;
+    score++;
+    let mut mask: int = 0b0001;
+    mask <<= 3; // Bitwise left shift short form (0b1000)
+    mask >>= 1; // Bitwise right shift short form (0b0100)
+
+    // 2D Array & 2D Vec Definitions
+    let grid_2d: [[int; 3]; 2] = [
+        [1, 2, 3],
+        [4, 5, 6]
+    ];
+    let grid_val: int = grid_2d[1][0];
+
+    let mut matrix_2d: Vec<Vec<int>> = Vec::new();
+    let mut row: Vec<int> = Vec::new();
+    row.push(10);
+    matrix_2d.push(row);
+
+    // Control Flow: Pattern Matching on Enums (Expression or Statement)
+    let shape_type: Shape = Shape::Circle(5.5);
+    match shape_type {
+        Shape::Circle(radius) => {
+            println("Found circle with radius: {radius}");
+        }
+        Shape::Rectangle(p1, p2) => {
+            println("Found rectangle");
+        }
+        Shape::Label { title, is_visible } => {
+            if is_visible == tru {
+                println("Visible label: {title}");
+            }
+        }
+    }
+
+    // Fallible Pattern Matching
+    let result: Result<int, String> = parse_coordinate("42");
+    match result {
+        Ok(val)  => println("Parsed value: {val}");
+        Err(err) => println("Error: {err}");
+    }
+
+    // 5. Loops
+
+    // Variant A: C-style Index Loop (fori)
+    fori (let i: int = 0; i < 5; i++) {
+        score += i;
+    }
+
+    // Variant B: Collection Iterator (for in)
+    let numbers: [int; 3] = [10, 20, 30];
+    for num in numbers {
+        println("Number: {num}");
+    }
+
+    // Variant C: Standard While Loop
+    let mut countdown: int = 3;
+    while countdown > 0 {
+        countdown--;
+    }
+
+    // Variant D: Infinite Loop with Break
+    loop {
+        if score > 100 {
+            break;
+        }
+        score += 10;
     }
 }
