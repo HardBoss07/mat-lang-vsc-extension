@@ -3,7 +3,7 @@
   "displayName": "MAT Syntax",
   "description": "Syntax highlighting and color theme for the MAT programming language",
   "version": "0.0.2",
-  "publisher": "M4tt3o",
+  "publisher": "m4tt3o",
   "engines": {
     "vscode": "^1.99.0"
   },
