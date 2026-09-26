@@ -78,7 +78,7 @@ fn main() {
 Search for `MAT Syntax` in the VS Code Extensions tab (`Ctrl+Shift+X`), or install directly via CLI:
 
 ```bash
-code --install-extension HardBoss07.mat-lang-syntax
+code --install-extension m4tt3o.mat-lang-syntax
 ```
 
 ### From Local VSIX Package
