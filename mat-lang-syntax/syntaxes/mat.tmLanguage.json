@@ -9,6 +9,9 @@
       "match": "//.*$"
     },
     {
+      "include": "#block-comment"
+    },
+    {
       "name": "string.quoted.double.mat",
       "begin": "\"",
       "end": "\"",
@@ -136,6 +139,27 @@
       "match": "[\\(\\)\\[\\]\\{\\}]"
     }
   ],
-  "repository": {},
+  "repository": {
+    "block-comment": {
+      "name": "comment.block.mat",
+      "begin": "/\\*",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.comment.mat"
+        }
+      },
+      "end": "\\*/",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.comment.mat"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#block-comment"
+        }
+      ]
+    }
+  },
   "uuid": "mat-lang-syntax-highlighting"
 }

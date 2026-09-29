@@ -1,3 +1,7 @@
+/*
+    In this File deals as an example file for the Syntax Highlighting
+*/
+
 // 1. Module Declarations & Imports
 import math::geometry;
 import std::io;
